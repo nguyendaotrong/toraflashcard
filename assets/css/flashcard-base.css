@@ -1,0 +1,228 @@
+/* Flashcard container */
+.flashcard-container {
+    max-width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px; /* Giảm padding cơ bản */
+    background: #FFFFFF;
+    color: #222222;
+}
+
+/* Flashcard slider */
+.flashcard-slider {
+    display: flex;
+    flex-direction: column; /* Sắp xếp thành cột */
+    width: 100%;
+}
+
+/* Flashcard active (Section 1) */
+.flashcard-active {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+/* Flashcard item */
+.flashcard-item {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: none;
+    padding: 10px; /* Chỉ định padding cơ bản */
+}
+
+.flashcard-item.active {
+    display: block;
+}
+
+/* Flashcard wrapper */
+.flashcard-wrapper {
+    perspective: 1000px;
+    -webkit-perspective: 1000px; /* Tương thích Safari */
+    background-color: transparent;
+    overflow: hidden;
+    min-height: 2500px; /* Chiều cao tối thiểu */
+    max-width: 600px; /* Giới hạn tối đa để cân đối */
+    margin: 0 auto; /* Canh giữa */
+    padding: 0; /* Loại bỏ padding thừa */
+//    box-shadow: 0 6px 12px #E0E0E0;
+}
+
+/* Flashcard inner */
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Tương thích Safari */
+    transition: transform 0.6s ease-in-out;
+    -webkit-transition: transform 0.6s ease-in-out; /* Tương thích Safari */
+    min-height: 300px; /* Đảm bảo chiều cao tối thiểu */
+    padding: 0; /* Loại bỏ padding thừa */
+}
+
+.flashcard-wrapper.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Tương thích Safari */
+}
+
+/* Flashcard front and back content */
+.flashcard-front-content,
+.flashcard-back-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Tương thích Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px; /* Chỉ padding nội dung */
+    text-align: center;
+    color: #222222;
+    border-radius: 10px;
+    border: 3px solid #0097A7; /* Brand Primary Cyan */
+    background-color: #FFFFFF; /* Nền trắng cho mặt trước */
+    box-sizing: border-box; /* Đảm bảo padding không vượt quá kích thước */
+    margin: 0; /* Loại bỏ margin thừa */
+}
+
+.flashcard-back-content {
+    background-color: #FFF8E1; /* Nền vàng nhạt mặt sau */
+    color: #222222;
+    border-color: #FF9800;     /* Accent Orange cho border mặt sau */
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Tương thích Safari */
+}
+
+.flashcard-front-content p,
+.flashcard-back-content p {
+    margin: 0;
+    word-wrap: break-word;
+    font-family: inherit;
+    font-size: clamp(2rem, 5vw, 4rem); /* Áp dụng kích thước chữ trực tiếp lên p */
+    font-weight: normal; /* Loại bỏ độ đậm mặc định */
+    color: #222222; /* Text Main */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flashcard-container {
+        padding: 5px; /* Giảm padding thêm cho màn hình nhỏ */
+    }
+
+    .flashcard-item {
+        padding: 5px; /* Giảm padding lề trái/phải */
+    }
+
+    .flashcard-wrapper {
+        min-height: 250px; /* Giảm min-height cho màn hình nhỏ */
+        max-width: 500px;
+    }
+
+    .flashcard-inner {
+        min-height: 250px; /* Đồng bộ min-height */
+    }
+
+    .flashcard-front-content,
+    .flashcard-back-content {
+        padding: 15px; /* Giảm padding nội dung */
+        border-width: 2px; /* Giảm border thickness */
+    }
+}
+
+@media (max-width: 480px) {
+    .flashcard-active {
+        min-height: 200px;
+    }
+
+    .flashcard-item {
+        padding: 0; /* Loại bỏ padding hoàn toàn trên màn hình nhỏ */
+    }
+
+    .flashcard-wrapper {
+        200px !important /* Giảm min-height cho màn hình nhỏ hơn */
+        max-width: 350px;
+    }
+
+    .flashcard-inner {
+        min-height: 200px; /* Đồng bộ min-height */
+    }
+}
+
+/* Đảm bảo hiển thị trong LearnDash và BuddyBoss */
+.learndash-wrapper .flashcard-container,
+.bb-content-wrap .flashcard-container,
+.entry-content .flashcard-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 30px auto !important;
+    padding: 15px !important; /* Giảm padding */
+    background: #FFFFFF !important;
+    color: #222222 !important;
+}
+/* =================== LEARN FLASHCARD =================== */
+.learn-flashcard-wrapper {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    background-color: transparent;
+    overflow: hidden;
+    min-height: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+//    box-shadow: 0 6px 12px #E0E0E0;
+    position: relative;
+}
+.learn-flashcard-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    -webkit-transition: transform 0.6s ease-in-out;
+    min-height: 300px;
+    padding: 0;
+}
+.learn-flashcard-wrapper.flipped .learn-flashcard-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.learn-flashcard-front,
+.learn-flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    color: #222222;
+    border-radius: 10px;
+    border: 3px solid #0097A7;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    margin: 0;
+}
+.learn-flashcard-back {
+    background-color: #FFF8E1;
+    color: #222222;
+    border-color: #FF9800;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.learn-flashcard-front p,
+.learn-flashcard-back p {
+    margin: 0;
+    word-wrap: break-word;
+    font-family: inherit;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: normal;
+    color: #222222;
+}

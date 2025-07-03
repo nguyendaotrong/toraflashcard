@@ -1,0 +1,327 @@
+/* Vocabulary list (Section 3) */
+.vocabulary-list {
+    margin-top: 20px;
+    background-color: #F8F9FB;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #E0E0E0;
+    position: relative;
+}
+
+.vocabulary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.vocabulary-title {
+    background-color: #FF9800;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.vocabulary-title p {
+    margin: 0;
+    font-size: clamp(16px, 2vw, 18px);
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.vocabulary-actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-actions {
+    display: flex;
+    gap: 10px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+}
+
+.btn-all, .btn-saved {
+    padding: 5px 15px;
+    background-color: #FFFFFF;
+    border: 2px solid #0097A7;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: clamp(16px, 2.5vw, 18px);
+    font-weight: 700;
+    color: #0097A7;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-all.active, .btn-saved.active {
+    background-color: #0097A7!important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+.btn-all:hover, .btn-saved:hover {
+    background-color: #F8F9FB !important;
+    color: #0097A7!important;
+    box-shadow: none !important;
+}
+
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0;
+}
+
+.vocab-item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: relative;
+    padding: 12px 40px 12px 16px;
+    background-color: #FFFFFF;
+    border: 2px solid #0097A7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    min-height: 56px;
+    overflow: hidden;
+    color: #222222;
+}
+.vocab-item.bookmarked {
+    background-color: #FFF8E1;
+    border-color: #FF9800;
+    color: #FF9800;
+    transform: scale(1.02);
+}
+.vocab-item.bookmarked-effect {
+    transform: scale(1.05);
+}
+
+/* NEW: Wrapper cho kanji + reading */
+.vocab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 2px;
+}
+
+.vocab-kanji {
+    font-size: clamp(20px, 4vw, 24px);
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vocab-reading {
+    font-size: clamp(16px, 3vw, 18px);
+    color: #666;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Nút bookmark căn top-right tuyệt đối */
+.vocab-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background: none;
+}
+
+.action-button.bookmark-button {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0 !important;
+    outline: none !important;
+}
+
+.bookmark-icon-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F9FB;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.bookmark-icon-circle.bookmarked {
+    background-color: #FFF8E1 !important;
+    border: 2px solid #FF9800 !important;
+    color: #FF9800 !important;
+    transform: scale(1.2);
+}
+.bookmark-icon-circle.bookmarked svg {
+    stroke: #FF9800;
+}
+.bookmark-icon-circle svg {
+    width: 20px;
+    height: 20px;
+    stroke: #0097A7;
+    stroke-width: 1.5;
+    fill: none;
+    transition: stroke 0.3s ease;
+}
+.bookmark-icon-circle:hover {
+    background-color: #FF9800 !important;
+    border-radius: 50% !important;
+    transform: scale(1.2);
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.bookmark-icon-circle.bookmarked:hover {
+    background-color: #FFF8E1 !important;
+}
+.bookmark-icon-circle:hover svg {
+    stroke: #FFFFFF !important;
+    fill: none !important;
+}
+
+.flashcard-notification {
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 16px);
+    padding: 10px 20px;
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: 2px solid #2E7D32;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flashcard-notification.error {
+    background-color: #E53935;
+    border: 2px solid #E53935;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .list-grid {
+        grid-template-columns: 1fr;
+    }
+    .vocabulary-header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .vocabulary-title {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .vocabulary-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    .list-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .vocab-item {
+        padding: 8px 36px 8px 10px;
+        min-height: 44px;
+    }
+    .vocab-actions {
+        top: 6px;
+        right: 6px;
+    }
+    .vocab-kanji {
+        font-size: clamp(18px, 4vw, 20px);
+    }
+    .vocab-reading {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+    .flashcard-notification {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-grid {
+        grid-template-columns: 1fr;
+    }
+    .vocab-item {
+        padding: 6px 28px 6px 8px;
+        min-height: 36px;
+    }
+    .vocab-actions {
+        top: 4px;
+        right: 4px;
+    }
+    .vocab-kanji {
+        font-size: clamp(16px, 4vw, 18px);
+    }
+    .vocab-reading {
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    .flashcard-notification {
+        max-width: 100%;
+    }
+}
+.vocab-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 24px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.vocab-pagination .page-btn {
+    background: #FFFFFF; /* Nền trắng, đồng bộ card/box */
+    border: 2px solid #0097A7; /* Xanh ngọc, đồng bộ border flashcard/button */
+    color: #0097A7; /* Xanh ngọc, đồng bộ text chính cho button secondary/icon */
+    font-size: 16px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0 10px;
+    margin: 0 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px #E0E0E0;
+    outline: none;
+    font-weight: 600;
+}
+
+.vocab-pagination .page-btn.active,
+.vocab-pagination .page-btn:hover:not(:disabled) {
+    background: #0097A7;     /* Nền xanh ngọc khi active/hover */
+    color: #FFFFFF;          /* Text trắng cho nút nổi bật */
+    border-color: #0097A7;
+}
+
+.vocab-pagination .page-btn:disabled {
+    background: #F8F9FB;     /* Nền nhạt (box background) */
+    color: #BDBDBD;          /* Text xám nhạt */
+    border-color: #E0E0E0;
+    cursor: not-allowed;
+}

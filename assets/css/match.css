@@ -1,0 +1,228 @@
+/* Match Container */
+.tora-match-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    background: #F8F9FB;
+    border: 4px solid #0097A7;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px #E0E0E0;
+    position: relative;
+    color: #222222;
+    z-index: 10;
+}
+
+/* Match Content */
+.tora-match-container .tora-match-content {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+}
+
+/* Terms and Definitions Columns */
+.tora-match-container .tora-match-terms,
+.tora-match-container .tora-match-definitions {
+    flex: 1 1 0;
+    min-width: 120px;
+    max-width: 50%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    height: 100%;
+}
+
+/* Match Item */
+.tora-match-container .tora-match-item {
+    padding: 10px 20px;
+    background: #FFFFFF;
+    border: 2px solid #0097A7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    color: #222222;
+    text-align: center;
+    font-size: 1rem;
+    will-change: transform, opacity;
+    z-index: 10;
+    visibility: visible !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto !important;
+    position: relative;
+    height: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+.tora-match-container .tora-match-item:hover {
+    background: #F8F9FB;
+}
+.tora-match-container .tora-match-item.tora-match-item-selected {
+    background: #E0F7FA;
+    border-color: #1976D2;
+}
+.learndash-wrapper .tora-match-container .tora-match-item.tora-match-item-correct {
+    border: 2px solid #2E7D32 !important;
+    background: #E6FCF4 !important;
+    color: #2E7D32 !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+.tora-match-container .tora-match-item.tora-match-item-incorrect {
+    border: 3px solid #E53935 !important;
+    background: #FEF6E0 !important;
+    color: #E53935 !important;
+    animation: shake 0.7s;
+    -webkit-animation: shake 0.7s;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 10 !important;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+@-webkit-keyframes shake {
+    0%, 100% { -webkit-transform: translateX(0); }
+    25% { -webkit-transform: translateX(-5px); }
+    75% { -webkit-transform: translateX(5px); }
+}
+
+/* Result Popup */
+.tora-match-container .tora-match-result {
+    margin-top: 20px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: #666;
+    text-align: left;
+}
+.tora-match-container .tora-match-result.tora-correct-message .title {
+    color: #2E7D32;
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+.tora-match-container .tora-match-result.tora-incorrect-message .title {
+    color: #E53935;
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+.tora-match-container .tora-match-result .subtitle {
+    font-size: clamp(16px, 2.5vw, 16px);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+/* Continue Button */
+.tora-match-container .tora-match-continue.tora-correct-container {
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+.tora-match-container .tora-match-continue.tora-correct-container:hover {
+    background-color: #1976D2;
+}
+.tora-match-container .tora-match-continue.tora-incorrect-container {
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #E53935;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+.tora-match-container .tora-match-continue.tora-incorrect-container:hover {
+    background-color: #1976D2;
+}
+
+/* Responsive: vẫn GIỮ 2 cột trên mobile */
+@media (max-width: 768px) {
+    .tora-match-container .tora-match-terms,
+    .tora-match-container .tora-match-definitions {
+        min-width: 0;
+        max-width: 50%;
+        grid-auto-rows: 1fr;
+    }
+    .tora-match-container .tora-match-item {
+        font-size: 0.9rem;
+        min-height: 40px;
+    }
+    .tora-match-container .tora-match-continue {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tora-match-container .tora-match-content {
+        flex-direction: row; /* Giữ 2 cột trên mobile */
+    }
+    .tora-match-container .tora-match-terms,
+    .tora-match-container .tora-match-definitions {
+        min-width: 0;
+        max-width: 50%;
+        grid-auto-rows: 1fr;
+    }
+    .tora-match-container .tora-match-item {
+        font-size: 0.8rem;
+        min-height: 36px;
+    }
+    .tora-match-container .tora-match-continue {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+}
+
+.quiz-container.single-choice.true-false.tora-match-container {
+    margin: 5px !important;
+    padding: 10px !important;
+}
+.quiz-container.single-choice.true-false.tora-match-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.learndash_content_wrap {
+    overflow-x: hidden;
+}
+.tora-match-container,
+.quiz-container.single-choice.true-false.tora-match-container,
+.tora-match-container * {
+    box-sizing: border-box !important;
+}
+.quiz-container.single-choice.true-false.tora-match-container {
+    max-width: calc(100% - 8px) !important;
+    width: calc(100% - 8px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

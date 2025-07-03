@@ -1,0 +1,91 @@
+/* Learning Modes Section */
+.learning-modes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    background: #F8F9FB;
+}
+
+/* Mode Item */
+.mode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 2px solid #0097A7;
+    box-shadow: 0 6px 12px #E0E0E0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    color: #222222;
+}
+.mode-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 24px #1976D2;
+}
+
+/* Mode Icon */
+.mode-icon {
+    font-size: 36px;
+    color: #0097A7;
+    margin-bottom: 0.67rem;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block;
+    line-height: 1;
+    visibility: visible;
+    width: auto;
+    height: auto;
+}
+
+/* Mode Text */
+.mode-item span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #222222;
+    font-family: "Be VNPro";
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .learning-modes {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .mode-item {
+        padding: 0.67rem;
+    }
+
+    .mode-icon {
+        font-size: 20px;
+    }
+
+    .mode-item span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .learning-modes {
+        gap: 1rem;
+    }
+
+    .mode-item {
+        padding: 0.44rem;
+    }
+
+    .mode-icon {
+        font-size: 16px;
+    }
+
+    .mode-item span {
+        font-size: 13px;
+    }
+}

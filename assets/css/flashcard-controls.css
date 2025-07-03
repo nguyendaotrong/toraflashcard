@@ -1,0 +1,119 @@
+/* Flashcard controls (Section 2) - Container */
+.flashcard-control-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Khoảng cách giữa flashcard và control */
+}
+
+/* Thanh tiến trình */
+.flashcard-progress {
+    width: 100%;
+    max-width: 300px;
+    height: 8px; /* Chiều cao mỏng hơn */
+    background-color: #E0E0E0; /* Brand Border Gray */
+    border-radius: 4px; /* Bo góc nhẹ */
+    margin-bottom: 10px; /* Khoảng cách với nút điều hướng */
+    overflow: hidden;
+    padding: 0; /* Loại bỏ padding thừa */
+}
+.flashcard-progress .progress-bar {
+    height: 100%;
+    background-color: #0097A7; /* Brand Primary Cyan */
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Nút điều hướng */
+.flashcard-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0; /* Loại bỏ padding thừa */
+}
+
+.nav-button {
+    padding: 0;
+    background-color: #0097A7; /* Brand Primary Cyan */
+    color: #FFFFFF; /* Màu trắng cho icon/chữ */
+    border: none;
+    border-radius: 50%; /* Hình tròn */
+    cursor: pointer;
+    font-size: 30px; /* Tăng kích thước icon lên 30px */
+    font-weight: 900; /* Tăng độ dày của ký hiệu */
+    width: 50px; /* Kích thước nút */
+    height: 50px; /* Kích thước nút */
+    line-height: 50px; /* Đồng bộ với height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+    transition: none; /* Xóa hiệu ứng chuyển đổi */
+}
+.nav-button:hover,
+.nav-button:active,
+.nav-button:focus {
+    background-color: #0097A7 !important;
+    transform: none !important;
+    outline: none !important;
+}
+
+/* Bộ đếm flashcard */
+.flashcard-counter {
+    font-size: 20px; /* Cân bằng với kích thước nút */
+    color: #222222; /* Text Main */
+    font-weight: bold; /* Tăng độ đậm */
+}
+
+/* 4 khối chức năng */
+.flashcard-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0; /* Loại bỏ padding thừa */
+}
+.flashcard-action {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    background-color: #F8F9FB; /* Background Soft */
+    border: 2px solid #0097A7; /* Brand Primary Cyan */
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: clamp(14px, 2vw, 16px);
+    color: #222222; /* Text Main */
+    transition: background-color 0.3s;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flashcard-action:hover {
+    background-color: #E0E0E0;
+}
+
+/* Responsive cho 4 khối */
+@media (max-width: 768px) {
+    .flashcard-action {
+        flex: 0 0 48%; /* 2 cột trên di động */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        width: 40px; /* Giảm kích thước nút trên di động nhỏ */
+        height: 40px; /* Giảm kích thước nút trên di động nhỏ */
+        line-height: 40px; /* Đồng bộ với height */
+        font-size: 24px; /* Tăng kích thước chữ lên 24px trên di động nhỏ */
+        font-weight: 900; /* Tăng độ dày */
+    }
+    .flashcard-counter {
+        font-size: 16px; /* Giảm kích thước chữ trên di động nhỏ */
+        color: #222222;
+        font-weight: bold;
+    }
+    .flashcard-progress {
+        max-width: 200px;
+        height: 6px; /* Giảm chiều cao trên di động nhỏ */
+    }
+}

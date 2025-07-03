@@ -1,0 +1,75 @@
+msgid "" msgstr "" "Project-Id-Version: Tora Flashcard 1.4.0\n" "POT-Creation-Date: 2025-06-27 00:36+0700\n" "PO-Revision-Date: 2025-06-27 00:36+0700\n" "Last-Translator: Your Name\n" "Language-Team: Your Name\n" "Language: vi_VN\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=UTF-8\n" "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Tora Flashcard" msgstr "Tora Flashcard"
+
+msgid "Lỗi: Bảng cơ sở dữ liệu không tồn tại." msgstr "Lỗi: Bảng cơ sở dữ liệu không tồn tại."
+
+msgid "Vui lòng cung cấp set_id hợp lệ." msgstr "Vui lòng cung cấp set_id hợp lệ."
+
+msgid "Bộ flashcard không tồn tại." msgstr "Bộ flashcard không tồn tại."
+
+msgid "Chưa có flashcard trong bộ này." msgstr "Chưa có flashcard trong bộ này."
+
+msgid "Trước" msgstr "Trước"
+
+msgid "Tiếp" msgstr "Tiếp"
+
+msgid "Bạn không có quyền truy cập trang này." msgstr "Bạn không có quyền truy cập trang này."
+
+msgid "Bảng bộ flashcard không tồn tại." msgstr "Bảng bộ flashcard không tồn tại."
+
+msgid "Bảng flashcard không tồn tại." msgstr "Bảng flashcard không tồn tại."
+
+msgid "Lỗi khi tạo bộ flashcard: " msgstr "Lỗi khi tạo bộ flashcard: "
+
+msgid "Đã tạo bộ flashcard!" msgstr "Đã tạo bộ flashcard!"
+
+msgid "Vui lòng nhập tên bộ flashcard!" msgstr "Vui lòng nhập tên bộ flashcard!"
+
+msgid "Lỗi khi thêm flashcard: " msgstr "Lỗi khi thêm flashcard: "
+
+msgid "Đã thêm flashcard!" msgstr "Đã thêm flashcard!"
+
+msgid "Vui lòng chọn bộ flashcard và nhập đầy đủ thông tin!" msgstr "Vui lòng chọn bộ flashcard và nhập đầy đủ thông tin!"
+
+msgid "Tên bộ:" msgstr "Tên bộ:"
+
+msgid "Mô tả:" msgstr "Mô tả:"
+
+msgid "Khóa học LearnDash:" msgstr "Khóa học LearnDash:"
+
+msgid "Chọn khóa học" msgstr "Chọn khóa học"
+
+msgid "Tạo Bộ Flashcard" msgstr "Tạo Bộ Flashcard"
+
+msgid "Thêm Flashcard" msgstr "Thêm Flashcard"
+
+msgid "Bộ Flashcard:" msgstr "Bộ Flashcard:"
+
+msgid "Chọn bộ flashcard" msgstr "Chọn bộ flashcard"
+
+msgid "Chưa có bộ flashcard" msgstr "Chưa có bộ flashcard"
+
+msgid "Thuật ngữ:" msgstr "Thuật ngữ:"
+
+msgid "Định nghĩa:" msgstr "Định nghĩa:"
+
+msgid "Danh sách Bộ Flashcard" msgstr "Danh sách Bộ Flashcard"
+
+msgid "Khóa học" msgstr "Khóa học"
+
+msgid "Flashcards" msgstr "Flashcards"
+
+msgid "Hành động" msgstr "Hành động"
+
+msgid "Không có" msgstr "Không có"
+
+msgid "Ẩn/Hiện Flashcards" msgstr "Ẩn/Hiện Flashcards"
+
+msgid "Chưa có flashcard" msgstr "Chưa có flashcard"
+
+msgid "Chỉnh sửa" msgstr "Chỉnh sửa"
+
+msgid "Xóa" msgstr "Xóa"
+
+msgid "Chưa có bộ flashcard nào." msgstr "Chưa có bộ flashcard nào."

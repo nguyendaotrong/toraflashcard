@@ -1,0 +1,234 @@
+/* wp-content/plugins/tora-flashcard/assets/css/true-false.css */
+
+/* True/False Container */
+.learndash-wrapper .quiz-container.true-false {
+    width: 100%;
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #F8F9FB;
+    border: 4px solid #0097A7;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px #E0E0E0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Quiz Content */
+.learndash-wrapper .quiz-container.true-false .quiz-content {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Term and Definition */
+.learndash-wrapper .quiz-container.true-false .term-container {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1976D2;
+    margin-bottom: 10px;
+}
+
+.learndash-wrapper .quiz-container.true-false .definition-container {
+    font-size: 1rem;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.learndash-wrapper .quiz-container.true-false .svg-connector {
+    margin: 10px auto;
+}
+
+/* Options */
+.learndash-wrapper .quiz-container.true-false .true-false-options.custom-true-false-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 10;
+}
+
+.learndash-wrapper .quiz-container.true-false .true-false-option {
+    padding: 10px 20px;
+    background: #FFFFFF;
+    border: 2px solid #0097A7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    color: #222222;
+    text-align: center;
+    font-size: 1rem;
+    flex: 1;
+    z-index: 10;
+    visibility: visible !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+.learndash-wrapper .quiz-container.true-false .true-false-option:hover {
+    background: #F8F9FB;
+}
+
+.learndash-wrapper .quiz-container.true-false .true-false-option.selected {
+    background: #E0F7FA;
+    border-color: #1976D2;
+    color: #1976D2;
+}
+
+.learndash-wrapper .quiz-container.true-false .true-false-option.correct {
+    border: 2px solid #2E7D32 !important;
+    background: #E6FCF4 !important;
+    color: #2E7D32 !important;
+}
+
+.learndash-wrapper .quiz-container.true-false .true-false-option.incorrect {
+    border: 3px solid #E53935 !important;
+    background: #FEF6E0 !important;
+    color: #E53935 !important;
+    animation: shake 0.7s;
+    -webkit-animation: shake 0.7s;
+}
+
+/* Submit Button */
+.learndash-wrapper .quiz-container.true-false .true-false-submit {
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #0097A7;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none;
+}
+.learndash-wrapper .quiz-container.true-false .true-false-submit:hover {
+    background-color: #1976D2;
+}
+
+/* Result Popup */
+.learndash-wrapper .quiz-container.true-false .correct-message,
+.learndash-wrapper .quiz-container.true-false .incorrect-message {
+    margin-top: 20px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: #666;
+    text-align: left;
+}
+
+.learndash-wrapper .quiz-container.true-false .correct-message .title {
+    color: #2E7D32;
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.learndash-wrapper .quiz-container.true-false .incorrect-message .title {
+    color: #E53935;
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.learndash-wrapper .quiz-container.true-false .correct-message .subtitle,
+.learndash-wrapper .quiz-container.true-false .incorrect-message .subtitle {
+    font-size: clamp(16px, 2.5vw, 16px);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.learndash-wrapper .quiz-container.true-false .correct-message .details,
+.learndash-wrapper .quiz-container.true-false .incorrect-message .details {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Continue Button */
+.learndash-wrapper .quiz-container.true-false .quiz-continue.correct-container {
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+.learndash-wrapper .quiz-container.true-false .quiz-continue.correct-container:hover {
+    background-color: #1976D2;
+}
+.learndash-wrapper .quiz-container.true-false .quiz-continue.incorrect-container {
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #E53935;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+.learndash-wrapper .quiz-container.true-false .quiz-continue.incorrect-container:hover {
+    background-color: #1976D2;
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+@-webkit-keyframes shake {
+    0%, 100% { -webkit-transform: translateX(0); }
+    25% { -webkit-transform: translateX(-5px); }
+    75% { -webkit-transform: translateX(5px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .learndash-wrapper .quiz-container.true-false .term-container,
+    .learndash-wrapper .quiz-container.true-false .definition-container {
+        font-size: 1rem;
+    }
+    .learndash-wrapper .quiz-container.true-false .true-false-option {
+        font-size: 0.9rem;
+    }
+    .learndash-wrapper .quiz-container.true-false .true-false-submit,
+    .learndash-wrapper .quiz-container.true-false .quiz-continue {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .learndash-wrapper .quiz-container.true-false .true-false-options.custom-true-false-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .learndash-wrapper .quiz-container.true-false .term-container,
+    .learndash-wrapper .quiz-container.true-false .definition-container {
+        font-size: 0.9rem;
+    }
+    .learndash-wrapper .quiz-container.true-false .true-false-option {
+        font-size: 0.8rem;
+    }
+    .learndash-wrapper .quiz-container.true-false .true-false-submit,
+    .learndash-wrapper .quiz-container.true-false .quiz-continue {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+}
+
+/* Tương thích LearnDash và BuddyBoss */
+.learndash-wrapper .quiz-container.true-false,
+.bb-content-wrap .quiz-container.true-false,
+.entry-content .quiz-container.true-false {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 30px auto !important;
+    padding: 15px !important;
+    opacity: 1 !important;
+}

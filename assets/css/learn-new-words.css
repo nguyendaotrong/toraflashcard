@@ -1,0 +1,554 @@
+/* Learn new words container */
+.learn-new-words-container {
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 10 !important;
+}
+
+/* Learn actions top (Power button) */
+.learn-actions-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.power-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.power-button i {
+    font-size: 40px;
+    color: #f44336;
+}
+
+/* Learn control section (Stats and Progress) */
+.learn-control-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Custom Learn Stats UI */
+.learn-stats-custom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    padding: 0 0 16px 0;
+    position: relative;
+}
+
+.stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 18px 0 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-block .stat-count {
+    font-size: 44px;
+    font-weight: 700;
+    color: #8f9db2;
+    line-height: 1;
+    margin-bottom: 0px;
+}
+
+.stat-block.learned .stat-count {
+    color: #0d6efd;
+}
+
+.stat-block .stat-label {
+    margin-top: 4px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 6px 14px 4px 14px;
+    font-size: 16px;
+    font-weight: 500;
+//    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-block.learned .stat-label {
+    color: #0d6efd;
+}
+.stat-block.not-learned .stat-label {
+    color: #222;
+}
+
+.stat-block .stat-label .icon {
+    font-size: 16px;
+    color: #8f9db2;
+    font-weight: bold;
+    margin-right: 2px;
+}
+.stat-block.learned .stat-label .icon {
+    color: #0d6efd;
+}
+.stat-block.not-learned .stat-label .icon {
+    color: #8f9db2;
+}
+
+.stat-progress {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1976f3;
+    background: none;
+    margin: 0 32px;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+.stat-progress .stat-current { color: #1976f3; }
+.stat-progress .stat-total { color: #1976f3; opacity: 0.7; }
+
+.flashcard-progress {
+    width: 100%;
+    max-width: 600px;
+    height: 14px;
+    background-color: #e0e0e0;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.flashcard-progress .progress-bar {
+    height: 100%;
+    background-color: #41c5c8;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Learn flashcard section */
+.learn-flashcard-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 11 !important;
+}
+
+/* Learn flashcard wrapper */
+.learn-flashcard-wrapper {
+    perspective: 1000px !important;
+    -webkit-perspective: 1000px !important;
+    background-color: transparent;
+    overflow: visible !important;
+    min-height: unset !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto;
+    position: relative;
+    display: block !important;
+}
+
+/* Learn flashcard inner */
+.learn-flashcard-inner {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    transform-style: preserve-3d !important;
+    -webkit-transform-style: preserve-3d !important;
+    transition: transform 0.6s ease-in-out !important;
+    -webkit-transition: transform 0.6s ease-in-out !important;
+    min-height: 400px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+}
+
+/* Flipped state */
+.learn-flashcard-wrapper.flipped .learn-flashcard-inner {
+    transform: rotateY(180deg) !important;
+    -webkit-transform: rotateY(180deg) !important;
+}
+
+/* Front and back content */
+.learn-flashcard-front,
+.learn-flashcard-back {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    padding: 40px !important;
+    text-align: center !important;
+    color: #333 !important;
+    border-radius: 12px !important;
+    border: 4px solid #41c5c8 !important;
+    background-color: #fff !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
+    visibility: visible !important;
+}
+
+.learn-flashcard-back {
+    transform: rotateY(180deg) !important;
+    -webkit-transform: rotateY(180deg) !important;
+}
+
+.learn-term,
+.learn-definition {
+    margin: 0 !important;
+    word-wrap: break-word !important;
+    font-family: Arial, sans-serif !important;
+    font-size: clamp(3.5rem, 8vw, 4.5rem) !important;
+    color: #333 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Learn button (V) and Not Learned button (X) */
+.learn-button,
+.not-learned-button {
+    background: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 12 !important;
+}
+
+.learn-button {
+    right: -45px;
+}
+.not-learned-button {
+    left: -45px;
+}
+
+/* Remove background on all states */
+.learn-button:hover,
+.not-learned-button:hover,
+.learn-button:focus,
+.not-learned-button:focus,
+.learn-button:active,
+.not-learned-button:active,
+.learn-button:focus-visible,
+.not-learned-button:focus-visible {
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+@keyframes shake {
+    0%, 100% { transform: scale(1) rotate(0deg);}
+    10%, 30%, 50%, 70%, 90% { transform: scale(1.2) rotate(-7deg);}
+    20%, 40%, 60%, 80% { transform: scale(1.2) rotate(7deg);}
+}
+
+/* Hiệu ứng rung lắc và phóng to icon khi hover/focus */
+.learn-button:hover img,
+.not-learned-button:hover img,
+.learn-button:focus img,
+.not-learned-button:focus img,
+.learn-button:hover i,
+.not-learned-button:hover i,
+.learn-button:focus i,
+.not-learned-button:focus i {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+    transform: scale(1.2);
+}
+
+.learn-button img,
+.not-learned-button img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Popup styles */
+.learn-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 4px solid #41c5c8;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.learn-popup h3 {
+    margin: 0 0 15px;
+    font-size: clamp(22px, 3.5vw, 26px);
+    color: #333;
+}
+
+.learn-popup p {
+    margin: 0 0 25px;
+    font-size: clamp(18px, 2.5vw, 20px);
+}
+
+.learn-popup button {
+    padding: 12px 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(16px, 2.5vw, 18px);
+    background-color: #41c5c8;
+    color: #fff;
+}
+
+.learn-popup button:hover {
+    background-color: #369ea1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .learn-new-words-container {
+        padding: 15px;
+    }
+    .learn-flashcard-wrapper {
+        min-height: 350px !important;
+        max-width: 900px !important;
+        width: 100% !important;
+    }
+    .learn-flashcard-inner {
+        min-height: 350px !important;
+    }
+    .learn-term,
+    .learn-definition {
+        font-size: clamp(3rem, 7vw, 4rem) !important;
+    }
+    .learn-button,
+    .not-learned-button {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .learn-button {
+        right: -15px;
+    }
+    .not-learned-button {
+        left: -10px;
+    }
+    .learn-button img,
+    .not-learned-button img {
+        width: 50px;
+        height: 50px;
+    }
+    .learn-stats-custom {
+        gap: 16px;
+        padding-bottom: 8px;
+    }
+    .stat-block {
+        padding: 0 8px;
+    }
+    .stat-block .stat-count {
+        font-size: 28px;
+    }
+    .stat-block .stat-label {
+        font-size: 13px;
+        padding: 5px 8px 3px 8px;
+    }
+    .stat-progress {
+        font-size: 18px;
+        margin: 0 8px 2px 8px;
+    }
+    .flashcard-progress {
+        max-width: 500px;
+        height: 12px;
+    }
+    .flashcard-counter {
+        font-size: 26px;
+    }
+    .learn-popup {
+        max-width: 400px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .learn-flashcard-wrapper {
+        min-height: 300px !important;
+        max-width: 350px !important;
+        width: 100% !important;
+    }
+    .learn-flashcard-inner {
+        min-height: 300px !important;
+    }
+    .learn-term,
+    .learn-definition {
+        font-size: clamp(2.5rem, 6vw, 3.5rem) !important;
+    }
+    .learn-button,
+    .not-learned-button {
+        top: auto;
+        bottom: -100px;
+        transform: none;
+    }
+    .learn-button {
+        right: 20px;
+    }
+    .not-learned-button {
+        left: 20px;
+    }
+    .learn-button img,
+    .not-learned-button img {
+        width: 40px;
+        height: 40px;
+    }
+    .learn-stats-custom {
+        gap: 8px;
+        padding-bottom: 4px;
+    }
+    .stat-block {
+        padding: 0 4px;
+    }
+    .stat-block .stat-count {
+        font-size: 18px;
+    }
+    .stat-block .stat-label {
+        font-size: 11px;
+        padding: 3px 4px 2px 4px;
+    }
+    .stat-progress {
+        font-size: 12px;
+        margin: 0 4px 1px 4px;
+    }
+    .flashcard-progress {
+        max-width: 300px;
+        height: 10px;
+    }
+    .flashcard-counter {
+        font-size: 22px;
+    }
+    .learn-popup {
+        max-width: 300px;
+        padding: 15px;
+    }
+}
+
+.learn-popup-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.learn-popup .relearn-button,
+.learn-popup .quiz-button,
+.learn-popup .exit-button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background: #41c5c8;
+    color: #fff;
+    font-size: clamp(16px, 2.5vw, 18px);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+}
+.learn-popup .relearn-button:hover,
+.learn-popup .quiz-button:hover,
+.learn-popup .exit-button:hover {
+    background: #369ea1;
+}
+.learn-popup .relearn-button {
+    background: #41c5c8;
+    /* Nếu muốn style khác, chỉnh ở đây */
+}
+
+/* Mobile: chuyển thành 2 hàng (dọc) */
+@media (max-width: 600px) {
+    .learn-popup-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .learn-popup .relearn-button,
+    .learn-popup .quiz-button,
+    .learn-popup .exit-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.learn-popup-actions, .quiz-popup-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.learn-popup .relearn-button,
+.learn-popup .quiz-button,
+.learn-popup .exit-button,
+.quiz-popup-actions .quiz-start,
+.quiz-popup-actions .quiz-cancel {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background: #41c5c8;
+    color: #fff;
+    font-size: clamp(16px, 2.5vw, 18px);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+}
+.learn-popup .relearn-button:hover,
+.learn-popup .quiz-button:hover,
+.learn-popup .exit-button:hover,
+.quiz-popup-actions .quiz-start:hover,
+.quiz-popup-actions .quiz-cancel:hover {
+    background: #369ea1;
+}
+@media (max-width: 600px) {
+    .learn-popup-actions, .quiz-popup-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .learn-popup .relearn-button,
+    .learn-popup .quiz-button,
+    .learn-popup .exit-button,
+    .quiz-popup-actions .quiz-start,
+    .quiz-popup-actions .quiz-cancel {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Đảm bảo hiển thị trong LearnDash và BuddyBoss */
+.learndash-wrapper .learn-new-words-container,
+.bb-content-wrap .learn-new-words-container,
+.entry-content .learn-new-words-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 10px auto !important;
+    padding: 5px !important;
+}
+
